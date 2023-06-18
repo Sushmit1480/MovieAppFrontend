@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <mat-grid-list cols="4" rowHeight="400px">
+        <div *ngFor="let movie of movies">
+            <mat-grid-tile>
+                <div class="card mt-3" style="width: 14rem;">
+                    <img src="assets/picture.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Movie: {{movie.id.movieName | uppercase}}</h3>
+                        <h3 class="card-title">Theatre: {{movie.id.theatherName | uppercase}}</h3>
+                        <button class="btn btn-primary" (click)="bookTicket(movie.id.movieName, movie.id.theatherName)">Book Ticket</button>
+                        <span class="mx-2" *ngIf="email=='admin@gmail.com'"><button (click)="onDelete(movie.id.movieName, movie.id.theatherName)"><img src="assets/trash-can.png" height="30" width="20"/></button></span>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </div>
+    </mat-grid-list>
+</div>

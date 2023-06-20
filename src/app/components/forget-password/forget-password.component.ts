@@ -11,7 +11,7 @@ export class ForgetPasswordComponent implements OnInit {
   constructor(private service:MovieBookingService) { }
   isfailure = false;
   loginClass={
-    "email":null,
+    "email":null as string| null,
     "password":""
   }
  

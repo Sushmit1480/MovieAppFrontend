@@ -1,22 +1,26 @@
-<div class="row justify-content-center mt-5">
+<div class="row justify-content-center mt-3">
     <div class="col-12 col-md-4 mt-3">
-        <div class="card">
-            <h2 class="card-header text-center">Add Movie</h2>
+        <div class="card shadow">
+            <div class="container text-center">
+                <img src="/assets/button.png" style="width: 100px;" alt="loginImage" 
+                class="img-fluid mt-3">
+            </div> 
+            <h2 class="text-center mt-1">Add Movie</h2>
             <div class="card-body">
                 <form (ngSubmit)="onSubmit()">
                     <div class="form-group mb-3">
                         <label for="movieName" class="form-label">Movie Name:</label>
-                        <input type="text" class="form-control" [(ngModel)]="movie.id.movieName" 
+                        <input type="text" required class="form-control" [(ngModel)]="movie.id.movieName" 
                         name="movieName" id="movieName">
                     </div>
                     <div class="form-group mb-3">
                         <label for="theatherName" class="form-label">Theather Name:</label>
-                        <input type="text" class="form-control" [(ngModel)]="movie.id.theatherName" 
+                        <input type="text" required class="form-control" [(ngModel)]="movie.id.theatherName" 
                         name="theatherName" id="theatherName">
                     </div> 
                     <div class="form-group mb-3">
                         <label for="allotedSeats" class="form-label">Alloted Seats:</label>
-                        <input type="number" class="form-control" [(ngModel)]="movie.allotedSeats" 
+                        <input type="number" required class="form-control" [(ngModel)]="movie.allotedSeats" 
                         name="allotedSeats" id="allotedSeats">
                     </div>
 

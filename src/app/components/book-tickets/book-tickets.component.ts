@@ -12,14 +12,14 @@ export class BookTicketsComponent implements OnInit {
 
   movieName: any;
   theatherName: any;
-  noOfTickets = null;
+  noOfTickets = null as number | null;
   seats="";
 
   ticket = {
     //ticketId:null,
     movieName:"",
     theatherName:"",
-    noOfTickets:null,
+    noOfTickets:null as number| null,
     seats:[""]
   }
 
